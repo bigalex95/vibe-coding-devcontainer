@@ -1,6 +1,8 @@
 #!/bin/bash
 
-DOTFILES_DIR="/workspace/dotfiles"
+# Get the directory where the script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$SCRIPT_DIR/dotfiles"
 HOME_DIR="$HOME"
 
 create_symlink() {

@@ -1,0 +1,22 @@
+{
+  "name": "Vibe Coding Devcontainer",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "vibe-coding",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "ms-python.vscode-pylance"]
+    }
+  },
+  "remoteUser": "vscode",
+
+  // Features to enhance the environment
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": "true",
+      "configureZshAsDefaultShell": "true",
+      "installOhMyZsh": "true",
+      "upgradePackages": "false"
+    }
+  }
+}

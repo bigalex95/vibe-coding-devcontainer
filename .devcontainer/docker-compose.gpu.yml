@@ -1,0 +1,10 @@
+services:
+  vibe-coding:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            # Only enable this if you have an NVIDIA GPU and the NVIDIA Container Toolkit installed
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

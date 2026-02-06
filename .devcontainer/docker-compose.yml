@@ -1,0 +1,12 @@
+services:
+  vibe-coding:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/workspace:cached
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+
+    # Run as the non-root user
+    user: vscode
